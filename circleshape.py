@@ -1,12 +1,11 @@
 import pygame
 
 
-# Base class for game objects
+# Base class for game objects - players + asteroids
 class CircleShape(pygame.sprite.Sprite):
     containers: tuple[pygame.sprite.Group, ...]
 
     def __init__(self, x: float, y: float, radius: float) -> None:
-        # we will be using this later
         if hasattr(self, "containers"):
             super().__init__(*self.containers)
         else:
@@ -17,9 +16,7 @@ class CircleShape(pygame.sprite.Sprite):
         self.radius = radius
 
     def draw(self, screen: pygame.Surface) -> None:
-        # must override
         pass
 
     def update(self, dt: float) -> None:
-        # must override
         pass
