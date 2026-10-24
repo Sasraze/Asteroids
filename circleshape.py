@@ -1,7 +1,7 @@
 import pygame
 
 
-# Base class for game objects - players + asteroids
+# Base class for game objects - players + asteroids + shots
 class CircleShape(pygame.sprite.Sprite):
     containers: tuple[pygame.sprite.Group, ...]
 
